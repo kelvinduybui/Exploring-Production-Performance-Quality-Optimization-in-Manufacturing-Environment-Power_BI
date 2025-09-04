@@ -22,16 +22,24 @@
 - Task: Build a **Power BI Operations Dashboard** for the **Production Director** to get clear insights, make better decisions, and improve operations.  
 
 👥 **Target Audience**  
-- e
-- đ
-- s
+- **Primary Stakeholder**: Head of Production
+- **Secondary Stakeholders**: Warehouse Department, Quality Control Department, Planning Department
 
-🎯 **Objective**  
-nknknknknk  
+🎯 **Objective**   
+Provide the stakeholders with a clear and interactive dashboard to monitor manufacturing performance, track inventory and quality, and support data-driven operational decisions.  
 
 🛠️ **Tools Used**  
 - **Power BI**: For data integration, production & inventory monitoring, quality control tracking, and interactive operational dashboards  
 
 ---
 
-## 2️⃣ Dataset Description & Data Structure (DD & DS)  
+## 2️⃣ Dataset Description & Data Structure (DD & DS)
+
+### 📊 Data Description  
+- **Size:** Up to 72,839 rows & 25 columns  
+- **Format:** .pbix  
+- **Time range:** 2011 - 2014    
+
+### 🏷️ **Data Structure**  
+#### Table Used:  
+

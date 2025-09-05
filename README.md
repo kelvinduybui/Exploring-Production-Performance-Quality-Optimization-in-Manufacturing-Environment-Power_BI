@@ -42,4 +42,55 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 
 ### 🏷️ **Data Structure**  
 #### Table Used:  
+- 🏷️ **Product_Inventory** – Inventory details  
+
+| Column Name  | Data Type        | Description                  |
+|--------------|------------------|------------------------------|
+| ProductID    | INT              | Product identifier           |
+| LocationID   | INT              | Location identifier          |
+| Shelf        | INT              | Storage shelf                |
+| Bin          | INT              | Storage bin                  |
+| Quantity     | INT              | Inventory quantity           |
+| rowguid      | TEXT             | Unique identifier (GUID)     |
+| ModifiedDate | DATETIME         | Lastest modified date        |
+| SafetyStock  | INT              | Safety stock level           |
+| Status       | TEXT             | Quantity Status              |
+| ReorderPoint | INT              | Reorder Point                |
+
+- 🧾 **Production_ScrapReason** – Lookup for scrap reasons  
+
+| Column Name    | Data Type    | Description               |
+|----------------|--------------|---------------------------|
+| ScrapReasonID  | INT          | Scrap reason identifier   |
+| Name           | TEXT         | Scrap reason description  |
+| ModifiedDate   | DATETIME     | Lastest update date       |
+
+- 📄 **Production_Location** – Production site information
+
+| Column Name   | Data Type | Description                    |
+|---------------|-----------|--------------------------------|
+| LocationID    | INT       | Unique location identifier     |
+| Name          | TEXT      | Location name                  |
+| CostRate      | DECIMAL   | Cost rate per unit resource    |
+| Availability  | INT       | Location availability capacity |
+| ModifiedDate  | DATETIME  | Lastest update date            |
+
+# 🗂️ Production_WorkOrder – Core fact table containing production order details
+
+| Column Name     | Data Type | Description                       |
+|-----------------|-----------|-----------------------------------|
+| WorkOrderID     | INT       | Work order identifier             |
+| ProductID       | INT       | Product identifier                |
+| OrderQty        | INT       | Ordered quantity                  |
+| StockedQty      | INT       | Quantity stocked after production |
+| ScrappedQty     | INT       | Scrapped quantity                 |
+| StartDate       | DATETIME  | Planned start date                |
+| EndDate         | DATETIME  | Planned end date                  |
+| DueDate         | DATETIME  | Required completion date          |
+| ScrapReasonID   | INT       | Scrap reason identifier           |
+| ModifiedDate    | DATETIME  | Latest update date                |
+| Status          | TEXT  | Latest update date                |
+| IsDelayed    | BIN  | Latest update date                |
+| Scrap Reason    | DATETIME  | Latest update date                |
+
 

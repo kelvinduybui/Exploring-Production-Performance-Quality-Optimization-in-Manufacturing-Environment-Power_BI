@@ -42,6 +42,18 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 
 ### 🏷️ **Data Structure**  
 #### Table Used:  
+
+- 🔗 **Dim_date** – 
+
+| Column Name | Data Type | Description            |
+|-------------|-----------|------------------------|
+| Date        | DATETIME  | Full date value        |
+| Year        | INT       | Year number            |
+| Month       | TEXT      | Month with year        |
+| Quarter     | TEXT      | Quarter with year      |
+| Week        | INT       | Week number of year    |
+| Day         | INT       | Day number of month    |
+
 - 🏷️ **Product_Inventory** – Inventory details  
 
 | Column Name  | Data Type        | Description                  |
@@ -75,22 +87,47 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Availability  | INT       | Location availability capacity |
 | ModifiedDate  | DATETIME  | Lastest update date            |
 
-# 🗂️ Production_WorkOrder – Core fact table containing production order details
+- 🗂️ **Production_WorkOrder** – Core fact table containing production order details
 
-| Column Name     | Data Type | Description                       |
-|-----------------|-----------|-----------------------------------|
-| WorkOrderID     | INT       | Work order identifier             |
-| ProductID       | INT       | Product identifier                |
-| OrderQty        | INT       | Ordered quantity                  |
-| StockedQty      | INT       | Quantity stocked after production |
-| ScrappedQty     | INT       | Scrapped quantity                 |
-| StartDate       | DATETIME  | Planned start date                |
-| EndDate         | DATETIME  | Planned end date                  |
-| DueDate         | DATETIME  | Required completion date          |
-| ScrapReasonID   | INT       | Scrap reason identifier           |
-| ModifiedDate    | DATETIME  | Latest update date                |
-| Status          | TEXT  | Latest update date                |
-| IsDelayed    | BIN  | Latest update date                |
-| Scrap Reason    | DATETIME  | Latest update date                |
+| Column Name     | Data Type | Description                                               |
+|-----------------|-----------|-----------------------------------------------------------|
+| WorkOrderID     | INT       | Work order identifier                                     |
+| ProductID       | INT       | Product identifier                                        |
+| OrderQty        | INT       | Ordered quantity                                          |
+| StockedQty      | INT       | Quantity stocked after production                         |
+| ScrappedQty     | INT       | Scrapped quantity                                         |
+| StartDate       | DATETIME  | Planned start date                                        |
+| EndDate         | DATETIME  | Planned end date                                          |
+| DueDate         | DATETIME  | Required completion date                                  |
+| ScrapReasonID   | INT       | Scrap reason identifier                                   |
+| ModifiedDate    | DATETIME  | Latest update date                                        |
+| Status          | TEXT      | Work order status (e.g., completed on time/late/in progress/open) |
+| IsDelayed       | BIT       | 1 if delayed, else 0                                      |
+| ScrapReason     | TEXT      | Scrap reason                                              |
+
+- 🔗 **Production_WorkOrderRouting** – Routing and operation details
+
+| Column Name          | Data Type | Description                          |
+|----------------------|-----------|--------------------------------------|
+| WorkOrderID          | INT       | Work order identifier                |
+| ProductID            | INT       | Product identifier                   |
+| OperationSequence    | INT       | Operation order                      |
+| LocationID           | INT       | Production location identifier       |
+| ScheduledStartDate   | DATETIME  | Planned start time                   |
+| ScheduledEndDate     | DATETIME  | Planned end time                     |
+| ActualStartDate      | DATETIME  | Actual start time                    |
+| ActualEndDate        | DATETIME  | Actual end time                      |
+| ActualResourceHrs    | DECIMAL   | Actual resource hours consumed       |
+| PlannedCost          | DECIMAL   | Planned production cost              |
+| ActualCost           | DECIMAL   | Actual production cost               |
+| ModifiedDate         | DATETIME  | Latest update date                   |
+| LocationName         | TEXT      | Location name                        |
+| ScheduledProducingDays | INT     | Planned production days              |
+| ActualProducingDays  | INT       | Actual production days               |
+
+
+
+
+
 
 

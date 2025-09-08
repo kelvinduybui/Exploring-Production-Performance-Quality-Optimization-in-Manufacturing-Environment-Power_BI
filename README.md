@@ -142,6 +142,20 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 Conducted through cross-departmental discussions  
 
 ## 4️⃣ Visualization  
+### Page 1: Production Dashboard  
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%201.png?raw=true)  
+
+#### Key Takeaways:  
+
+### Page 2: Inventory Dashboard  
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%202.png?raw=true)
+
+#### Key Takeaways:  
+
+### Page 3: Quality Control Dashboard  
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%203.png?raw=true)
+
+#### Key Takeaways:  
 
 
 

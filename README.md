@@ -7,7 +7,7 @@
 ## 🗂️ Table of Contents
 1️⃣ [Context](#context)  
 2️⃣ [Dataset Description & Data Structure (DD & DS)](#dataset-description--data-structure-dd--ds)  
-3️⃣ [Design Thinking Framework]  
+3️⃣ [Design Thinking Framework](#design-thinking-framework)  
 4️⃣ [Visualization](#visualization)  
 5️⃣ [Insights & Recommendations](#insights--recommendations)  
 

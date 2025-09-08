@@ -102,7 +102,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | ScrapReasonID   | INT       | Scrap reason identifier                                   |
 | ModifiedDate    | DATETIME  | Latest update date                                        |
 | Status          | TEXT      | Work order status (e.g., completed on time/late/in progress/open) |
-| IsDelayed       | BIT       | 1 if delayed, else 0                                      |
+| IsDelayed       | BIN       | 1 if delayed, else 0                                      |
 | ScrapReason     | TEXT      | Scrap reason                                              |
 
 - 🔗 **Production_WorkOrderRouting** – Routing and operation details
@@ -126,7 +126,22 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | ActualProducingDays  | INT       | Actual production days               |
 
 
+## 3️⃣ Design Thinking Framework  
 
+### 🤝 Empathize  
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Empathy%201_Manu.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Empathy%202_Manu.jpg?raw=true)
+
+### 🎯 Define Northstar Metric & Point of View  
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/POV_manu.jpg?raw=true)
+
+### 💡 Ideate  
+![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Ideate_manu.jpg?raw=true)
+
+### 🛠️ Prototype & Review  
+Conducted through cross-departmental discussions  
+
+## 4️⃣ Visualization  
 
 
 

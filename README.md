@@ -125,7 +125,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | ScheduledProducingDays | INT     | Planned production days              |
 | ActualProducingDays  | INT       | Actual production days               |
 
-- **Product_Product**
+- **Product_Product**  
 | Column Name           | Data Type        | Description                                                                 |
 |-----------------------|------------------|-----------------------------------------------------------------------------|
 | ProductID             | INT              | Product identifier (primary key)                                            |

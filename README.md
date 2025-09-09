@@ -54,7 +54,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Week        | INT       | Week number of year    |
 | Day         | INT       | Day number of month    |
 
-- 🏷️ **Product_Inventory** – Inventory details  
+- 🏷️ **Product_Inventory**
 
 | Column Name  | Data Type        | Description                  |
 |--------------|------------------|------------------------------|
@@ -63,13 +63,13 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Shelf        | INT              | Storage shelf                |
 | Bin          | INT              | Storage bin                  |
 | Quantity     | INT              | Inventory quantity           |
-| rowguid      | TEXT             | Unique identifier (GUID)     |
+| rowguid      | UNIQUEIDENTIFIER | Unique identifier (GUID)     |
 | ModifiedDate | DATETIME         | Lastest modified date        |
 | SafetyStock  | INT              | Safety stock level           |
 | Status       | TEXT             | Quantity Status              |
 | ReorderPoint | INT              | Reorder Point                |
 
-- 🧾 **Production_ScrapReason** – Lookup for scrap reasons  
+- 🧾 **Production_ScrapReason**
 
 | Column Name    | Data Type    | Description               |
 |----------------|--------------|---------------------------|
@@ -77,7 +77,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Name           | TEXT         | Scrap reason description  |
 | ModifiedDate   | DATETIME     | Lastest update date       |
 
-- 📄 **Production_Location** – Production site information
+- 📄 **Production_Location**
 
 | Column Name   | Data Type | Description                    |
 |---------------|-----------|--------------------------------|
@@ -87,7 +87,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Availability  | INT       | Location availability capacity |
 | ModifiedDate  | DATETIME  | Lastest update date            |
 
-- 🗂️ **Production_WorkOrder** – Core fact table containing production order details
+- 🗂️ **Production_WorkOrder**
 
 | Column Name     | Data Type | Description                                               |
 |-----------------|-----------|-----------------------------------------------------------|
@@ -105,7 +105,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | IsDelayed       | BIN       | 1 if delayed, else 0                                      |
 | ScrapReason     | TEXT      | Scrap reason                                              |
 
-- 🔗 **Production_WorkOrderRouting** – Routing and operation details
+- 🔗 **Production_WorkOrderRouting**
 
 | Column Name          | Data Type | Description                          |
 |----------------------|-----------|--------------------------------------|
@@ -125,6 +125,35 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | ScheduledProducingDays | INT     | Planned production days              |
 | ActualProducingDays  | INT       | Actual production days               |
 
+- **Product_Product**
+| Column Name           | Data Type        | Description                                                                 |
+|-----------------------|------------------|-----------------------------------------------------------------------------|
+| ProductID             | INT              | Product identifier (primary key)                                            |
+| Name                  | TEXT             | Product name                                                                |
+| ProductNumber         | TEXT             | Unique product number/code                                                  |
+| MakeFlag              | BIT              | 1 = manufactured in-house, 0 = purchased externally                         |
+| FinishedGoodsFlag     | BIT              | 1 = sold as finished product, 0 = component only                            |
+| Color                 | TEXT             | Product color                                                               |
+| SafetyStockLevel      | INT              | Minimum inventory to maintain                                               |
+| ReorderPoint          | INT              | Inventory level that triggers reordering                                    |
+| StandardCost          | DECIMAL          | Standard manufacturing cost                                                 |
+| ListPrice             | DECIMAL          | Selling price                                                               |
+| Size                  | TEXT             | Product size (e.g., S, M, L, XL)                                            |
+| SizeUnitMeasureCode   | TEXT             | Unit of measure for size (e.g., CM, IN)                                     |
+| WeightUnitMeasureCode | TEXT             | Unit of measure for weight (e.g., LB, KG)                                   |
+| Weight                | DECIMAL          | Product weight                                                              |
+| DaysToManufacture     | INT              | Estimated days required to manufacture                                      |
+| ProductLine           | TEXT             | Product line code (R = Road, M = Mountain, T = Touring, S = Standard)       |
+| Class                 | TEXT             | Product class (H = High, M = Medium, L = Low)                               |
+| Style                 | TEXT             | Product style (W = Women’s, M = Men’s, U = Universal)                       |
+| ProductSubcategoryID  | INT              | Linked product subcategory identifier                                       |
+| ProductModelID        | INT              | Linked product model identifier                                             |
+| SellStartDate         | DATETIME         | Date when product was first available for sale                              |
+| SellEndDate           | DATETIME         | Date when product was no longer available for sale                          |
+| DiscontinuedDate      | DATETIME         | Date product was officially discontinued                                    |
+| rowguid               | UNIQUEIDENTIFIER | Globally unique identifier for replication/support                          |
+| ModifiedDate          | DATETIME         | Last modification date                                                      |
+| PriceLevel            | TEXT             | Custom field for price level/category (not standard in AdventureWorks)      |
 
 ## 3️⃣ Design Thinking Framework  
 
@@ -222,9 +251,72 @@ Conducted through cross-departmental discussions
   - Target reducing the **gap between Scheduled vs Actual Days** to **<10%**.
 
 ### Inventory insights  
+- **Overall Inventory**:  
+  - **Total Inventory**: 335.97K units.  
+  - **50 Overstock cases** and **4 Stockouts**, with **848 Reorders** needed.  
 
-### Inventory insights  
+- **Inventory by Location**:  
+  - Inventory is heavily concentrated in **Subassembly** and **Miscellaneous Storage**, holding the **highest stock levels**.  
+  - Downstream locations like **Paint Shop & Storage** hold significantly less inventory → **imbalance across the production chain**.  
 
+- **Inventory by Category**:  
+  - **Components** dominate inventory with **40K+ units**, much higher than other categories.  
+  - **Bikes** and **Accessories** follow, while **Clothing** contributes the least.  
+
+- **Stockout vs. Overstock**:  
+  - Both **Stockouts (4)** and **Overstock (50)** cases fall under **PriceLevel = Normal**.  
+  - Pricing is not the main driver → issues stem from **planning, forecasting, and supply chain execution gaps**.
+    
+### Inventory recommendations  
+- **Balance Inventory Across Locations**  
+  - Reduce excessive stock at **Subassembly/Miscellaneous Storage** and redistribute to **downstream stages**.  
+  - Apply **line balancing** or **Kanban systems** for smoother inventory flow.  
+
+- **Reduce Overstock**  
+  - Analyze the **50 Overstock cases** (e.g., forecasting errors, overproduction, low sales).  
+  - Apply **ABC/XYZ analysis** to better align stock with **demand variability**.  
+
+- **Set KPI Targets**  
+  - **Reduce Stockouts**: from **4 cases → 0** (short-term).  
+  - **Cut Overstock**: by **30–40% within 1 year**.  
+  - **Improve Reordering**: keep **“Reorder Needed” < 5% of total SKUs** through better **forecasting** and **supplier lead time control**.
+  
 ### Quality Control insights  
+- **Overall Scrap Performance**:  
+  - **Scrap rate**: 24% → relatively high.  
+  - **Total scrap cost**: ~$359.95K.  
+  - **729 Work Orders** affected, generating **11K+ scrap products**.  
 
-### Quality Control insights  
+- **By Year**:  
+  - Scrap rate rose from **~12% in 2011 → ~29% in 2013**, then dropped to **~20% in 2014**.  
+  - Indicates **improvement after 2013**, but performance remains **unstable**.  
+
+- **By Location**:  
+  - Highest scrap in **Subassembly (21%)**, followed by **Frame Welding (18%)** and **Frame Forming (18%)**.  
+  - Most scrap originates from **early-stage production processes**.  
+
+- **By Scrap Reason**:  
+  - Top reasons: **Seat assembly not as ordered (3.1%)**, **Drill size too large (2.9%)**, **Paint process failed (2.9%)**, **Trim length too long (2.9%)**.  
+  - Issues mainly tied to **machine setup** and **quality inspection processes**.  
+
+- **By Product**:  
+  - Scrap rates across products are **relatively high**, often **>50%**.  
+  - Critical cases: **ML Road Frame – Red (75%)** and **Mountain-100 Black (63%)**.  
+  - Suggests quality issues are **widespread across multiple SKUs**.  
+
+### Quality Control recommendations  
+- **Target High-Scrap Products**  
+  - Prioritize process review for **top 3 products** with highest scrap rates.  
+  - Apply **root cause analysis** (Fishbone, 5 Whys) to identify design, material, or process issues.  
+
+- **Improve Subassembly & Welding**  
+  - Enhance **machine calibration** and **operator training** in high-scrap stages.  
+  - Implement **early-stage quality checkpoints** to prevent downstream defects.  
+
+- **Cost Reduction Strategy**  
+  - A **10% scrap reduction** could save **~$36K**.  
+  - Focus on processes with **high cost + high scrap rate**.  
+
+- **Sustain Quality Improvement**  
+  - Develop a **Scrap KPI dashboard** with **weekly/monthly tracking**.  
+  - Adopt **Kaizen / Lean Six Sigma** to maintain scrap levels **<15%**.  

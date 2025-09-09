@@ -146,6 +146,13 @@ Conducted through cross-departmental discussions
 ![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%201.png?raw=true)  
 
 #### Key Takeaways:  
+- **Production Overview**: Number of **Work Orders**, number of **products**, and **Work Order status** (completed on time, completed late).
+- **Progress and Time**: **Average manufacturing time**, **average delay time**, and **actual production days** compared to scheduled days by year.
+- **Quality and Efficiency**: **Actual cost** and **actual hours** at each production stage/location.
+- **Product Analysis**: **Production volume by product type**, helping identify which products are produced the most.
+- **Delay Monitoring & Alerts**: Track **delay rates** and **alert flags** across different time levels (year, quarter, month, week, day), providing insights into **delivery trends** and fluctuations.
+- **Detailed Filters**: Ability to filter by **year, Work Order ID, product, location, and reason** to drill down into specific aspects.
+
 
 ### Page 2: Inventory Dashboard  
 ![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%202.png?raw=true)

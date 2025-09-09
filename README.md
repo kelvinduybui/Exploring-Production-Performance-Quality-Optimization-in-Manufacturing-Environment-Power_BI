@@ -125,35 +125,37 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | ScheduledProducingDays | INT     | Planned production days              |
 | ActualProducingDays  | INT       | Actual production days               |
 
-- **Product_Product**  
-| Column Name           | Data Type        | Description                                                                 |  
-|-----------------------|------------------|-----------------------------------------------------------------------------|  
-| ProductID             | INT              | Product identifier (primary key)                                            |  
-| Name                  | TEXT             | Product name                                                                |  
-| ProductNumber         | TEXT             | Unique product number/code                                                  |  
-| MakeFlag              | BIT              | 1 = manufactured in-house, 0 = purchased externally                         |  
-| FinishedGoodsFlag     | BIT              | 1 = sold as finished product, 0 = component only                            |  
-| Color                 | TEXT             | Product color                                                               |  
-| SafetyStockLevel      | INT              | Minimum inventory to maintain                                               |  
-| ReorderPoint          | INT              | Inventory level that triggers reordering                                    |  
-| StandardCost          | DECIMAL          | Standard manufacturing cost                                                 |  
-| ListPrice             | DECIMAL          | Selling price                                                               |  
-| Size                  | TEXT             | Product size (e.g., S, M, L, XL)                                            |  
-| SizeUnitMeasureCode   | TEXT             | Unit of measure for size (e.g., CM, IN)                                     |  
-| WeightUnitMeasureCode | TEXT             | Unit of measure for weight (e.g., LB, KG)                                   |  
-| Weight                | DECIMAL          | Product weight                                                              |  
-| DaysToManufacture     | INT              | Estimated days required to manufacture                                      |  
-| ProductLine           | TEXT             | Product line code (R = Road, M = Mountain, T = Touring, S = Standard)       |  
-| Class                 | TEXT             | Product class (H = High, M = Medium, L = Low)                               |  
-| Style                 | TEXT             | Product style (W = Women’s, M = Men’s, U = Universal)                       |  
-| ProductSubcategoryID  | INT              | Linked product subcategory identifier (foreign key)                         |  
-| ProductModelID        | INT              | Linked product model identifier (foreign key)                               |  
-| SellStartDate         | DATETIME         | Date when product was first available for sale                              |  
-| SellEndDate           | DATETIME         | Date when product was no longer available for sale                          |  
-| DiscontinuedDate      | DATETIME         | Date product was officially discontinued                                    |  
-| rowguid               | UNIQUEIDENTIFIER | Globally unique identifier for replication/support                          |  
-| ModifiedDate          | DATETIME         | Last modification date                                                      |  
-| PriceLevel            | TEXT             | Custom field for price level/category (not standard in AdventureWorks)      |  
+- **Product_Product**
+
+| Column Name           | Data Type        | Description                                                                 |
+|-----------------------|------------------|-----------------------------------------------------------------------------|
+| ProductID             | INT              | Product identifier (primary key)                                            |
+| Name                  | TEXT             | Product name                                                                |
+| ProductNumber         | TEXT             | Unique product number/code                                                  |
+| MakeFlag              | BIT              | 1 = manufactured in-house, 0 = purchased externally                         |
+| FinishedGoodsFlag     | BIT              | 1 = sold as finished product, 0 = component only                            |
+| Color                 | TEXT             | Product color                                                               |
+| SafetyStockLevel      | INT              | Minimum inventory to maintain                                               |
+| ReorderPoint          | INT              | Inventory level that triggers reordering                                    |
+| StandardCost          | DECIMAL          | Standard manufacturing cost                                                 |
+| ListPrice             | DECIMAL          | Selling price                                                               |
+| Size                  | TEXT             | Product size (e.g., S, M, L, XL)                                            |
+| SizeUnitMeasureCode   | TEXT             | Unit of measure for size (e.g., CM, IN)                                     |
+| WeightUnitMeasureCode | TEXT             | Unit of measure for weight (e.g., LB, KG)                                   |
+| Weight                | DECIMAL          | Product weight                                                              |
+| DaysToManufacture     | INT              | Estimated days required to manufacture                                      |
+| ProductLine           | TEXT             | Product line code (R = Road, M = Mountain, T = Touring, S = Standard)       |
+| Class                 | TEXT             | Product class (H = High, M = Medium, L = Low)                               |
+| Style                 | TEXT             | Product style (W = Women’s, M = Men’s, U = Universal)                       |
+| ProductSubcategoryID  | INT              | Linked product subcategory identifier (foreign key)                         |
+| ProductModelID        | INT              | Linked product model identifier (foreign key)                               |
+| SellStartDate         | DATETIME         | Date when product was first available for sale                              |
+| SellEndDate           | DATETIME         | Date when product was no longer available for sale                          |
+| DiscontinuedDate      | DATETIME         | Date product was officially discontinued                                    |
+| rowguid               | UNIQUEIDENTIFIER | Globally unique identifier for replication/support                          |
+| ModifiedDate          | DATETIME         | Last modification date                                                      |
+| PriceLevel            | TEXT             | Custom field for price level/category (not standard in AdventureWorks)      |
+
 
 
 ## 3️⃣ Design Thinking Framework  

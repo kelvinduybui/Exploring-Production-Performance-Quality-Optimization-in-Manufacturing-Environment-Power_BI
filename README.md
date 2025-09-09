@@ -1,4 +1,4 @@
-# Exploring Production Performance & Quality Optimization in Manufacturing Environment
+# Exploring Production Performance & Quality Optimization in Manufacturing Environment | Power BI
 
 **Author:** Bùi Xuân Bảo Duy (Kelvin)  
 **Date:** April 2025  

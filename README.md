@@ -1,4 +1,4 @@
-# Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI  
+# Exploring Production Performance & Quality Optimization in Manufacturing Environment
 
 **Author:** Bùi Xuân Bảo Duy (Kelvin)  
 **Date:** April 2025  

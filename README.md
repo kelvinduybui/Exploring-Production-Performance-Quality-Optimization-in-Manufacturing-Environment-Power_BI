@@ -151,6 +151,7 @@ Conducted through cross-departmental discussions
 - **Quality and Efficiency**: **Actual cost** and **actual hours** at each production stage/location.
 - **Product Analysis**: **Production volume by product type**, helping identify which products are produced the most.
 - **Delay Monitoring & Alerts**: Track **delay rates** and **alert flags** across different time levels (year, quarter, month, week, day), providing insights into **delivery trends** and fluctuations.
+- **Detail information** Ability to view detailed **status of each Work Order ID** and **Product ID**.
 - **Detailed Filters**: Ability to filter by **year, Work Order ID, product, location, and reason** to drill down into specific aspects.
 
 

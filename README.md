@@ -159,12 +159,72 @@ Conducted through cross-departmental discussions
 ![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%202.png?raw=true)
 
 #### Key Takeaways:  
+- **Inventory Overview**: Monitor **total stock**, number of **overstock cases**, number of **stockouts**, and products that need **reorder**.
+- **Location Analysis**: Inventory distributed across different **production sites/warehouses**, highlighting **disparities between locations**.
+- **Category Analysis**: Total stock divided by **product categories** (components, bikes, accessories, clothing), with the ability to drill down into **subcategories** and **product names**, helping identify which category or product **holds the most inventory**.
+- **Product-Level Tracking**: List of **products** with **stock quantity, storage location, safety stock level**, and **status** (e.g., needs reorder, low stock, normal), along with **PriceLevel** (Low, Normal, High).
+- **Proactive Alerts**: Identify **products requiring reorder** to avoid **production disruption** or **shortages**.
+- **Detailed Filters**: Filter by **year, Work Order ID, product, location, or reason** to analyze inventory conditions in more detail.
+
 
 ### Page 3: Quality Control Dashboard  
 ![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%203.png?raw=true)
 
 #### Key Takeaways:  
+- **Scrap Overview**: Track the number of **Work Orders with scrap**, **total scrapped products**, **scrap rate (%)**, and **total scrap cost**.
+- **Location Analysis**: Scrap rate by **production stage/location**, helping identify areas with **higher defect rates**.
+- **Time Analysis**: Scrap rate (%) by **year**, allowing observation of **trends and fluctuations** over different periods.
+- **Root Cause Analysis**: Scrap rate by **reason** (e.g., drill size too large, paint process failed, assembly errors), supporting the identification of **root causes**.
+- **Product Analysis**: Scrap rate by **product type**, highlighting which products are **more prone to defects**.
+- **Detailed Scrap Records**: A detailed list of **scrap cases** with **reasons and quantities**, enabling easier **tracking and control** of specific issues.
+- **Detailed Filters**: Filter by **year, Work Order ID, product, location, or reason** for deeper analysis.
 
+## 5️⃣ Insights & Recommendations
+### Production insights  
+- **Work Orders & Status**:  
+  - A total of **72.59K Work Orders** were recorded.  
+  - **31.4% (22.79K)** were delayed → a relatively high percentage, significantly impacting **production efficiency**.  
 
+- **Production & Delay Time**:  
+  - **Average manufacturing time**: 13.24 days.  
+  - **Average delay time**: 8.44 days (≈ 64% of total production time) → delays are **severe**.  
 
+- **Products**:  
+  - **BB Ball Bearing** is the leading product with **0.91M units**, nearly double the second-highest (**Seat Stays**).  
+  - Other key products include **Seat Stays, Blade, Fork End, and Chain Stays**.  
 
+- **Cost & Labor Hours by Location**:  
+  - **Frame** and **Final Assembly** incur the **highest costs and labor hours**.  
+  - **Paint** and **Deburr** require the least.  
+  - Bottlenecks are concentrated in **Frame** and **Final Assembly** stages.  
+
+- **Delay Trend by Year**:  
+  - Delay rates increased from **~28% in 2011** to **~34% in 2014**.  
+  - Late deliveries are **worsening over time** and not yet effectively resolved.  
+
+- **Scheduled vs Actual Producing Days**:  
+  - **Actual production days** consistently exceed **scheduled days**, highlighting **inaccurate planning**.   
+
+### Production recommendation  
+- **Improve Planning & Scheduling**  
+  - Enhance **forecasting accuracy** for production time, especially in **Frame** and **Final Assembly**.  
+  - Consider applying **Production Scheduling Optimization** or **Simulation models** to minimize planning gaps.  
+
+- **Reduce Delay Rate**  
+  - Investigate root causes of delays (e.g., **material shortages, machine downtime, labor shortages**).  
+  - Prioritize **process improvements** for high-volume products such as **BB Ball Bearing**.  
+
+- **Optimize Costs by Location**  
+  - Since **Frame** and **Final Assembly** are cost/time-intensive, evaluate **automation** or **line balancing** to reduce bottlenecks.  
+
+- **Develop Long-term KPIs**  
+  - Target reducing the **delay rate** from **31.4% → below 20%** within 1–2 years.  
+  - Target reducing the **gap between Scheduled vs Actual Days** to **<10%**.
+
+### Inventory insights  
+
+### Inventory insights  
+
+### Quality Control insights  
+
+### Quality Control insights  

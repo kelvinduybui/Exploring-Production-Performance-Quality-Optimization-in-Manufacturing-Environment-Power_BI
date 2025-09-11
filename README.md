@@ -43,7 +43,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 ### 🏷️ **Data Structure**  
 #### Table Used:  
 
-- 🔗 **Dim_date** – 
+- **Dim_date**  
 
 | Column Name | Data Type | Description            |
 |-------------|-----------|------------------------|
@@ -54,7 +54,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Week        | INT       | Week number of year    |
 | Day         | INT       | Day number of month    |
 
-- 🏷️ **Product_Inventory**
+- **Product_Inventory**
 
 | Column Name  | Data Type        | Description                  |
 |--------------|------------------|------------------------------|
@@ -69,7 +69,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Status       | TEXT             | Quantity Status              |
 | ReorderPoint | INT              | Reorder Point                |
 
-- 🧾 **Production_ScrapReason**
+- **Production_ScrapReason**
 
 | Column Name    | Data Type    | Description               |
 |----------------|--------------|---------------------------|
@@ -77,7 +77,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Name           | TEXT         | Scrap reason description  |
 | ModifiedDate   | DATETIME     | Lastest update date       |
 
-- 📄 **Production_Location**
+- **Production_Location**
 
 | Column Name   | Data Type | Description                    |
 |---------------|-----------|--------------------------------|
@@ -87,7 +87,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | Availability  | INT       | Location availability capacity |
 | ModifiedDate  | DATETIME  | Lastest update date            |
 
-- 🗂️ **Production_WorkOrder**
+- **Production_WorkOrder**
 
 | Column Name     | Data Type | Description                                               |
 |-----------------|-----------|-----------------------------------------------------------|
@@ -105,7 +105,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | IsDelayed       | BIN       | 1 if delayed, else 0                                      |
 | ScrapReason     | TEXT      | Scrap reason                                              |
 
-- 🔗 **Production_WorkOrderRouting**
+- **Production_WorkOrderRouting**
 
 | Column Name          | Data Type | Description                          |
 |----------------------|-----------|--------------------------------------|
@@ -156,6 +156,17 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | ModifiedDate          | DATETIME         | Last modification date                                                      |
 | PriceLevel            | TEXT             | Custom field for price level/category (not standard in AdventureWorks)      |
 
+- **Data Relationship**  
+  
+| **From Table**              | **To Table**                | **Join Key**             | **Relationship Type** |
+|-----------------------------|-----------------------------|--------------------------|------------------------|
+| Production_WorkOrder        | Product_Product             | ProductID                | Many-to-One            |
+| Production_WorkOrder        | Production_ScrapReason      | ScrapReasonID            | Many-to-One            |
+| Production_WorkOrder        | Production_WorkOrderRouting | WorkOrderID              | One-to-Many            |
+| Production_WorkOrderRouting | Production_Location         | LocationID               | Many-to-One            |
+| Product_Inventory           | Product_Product             | ProductID                | Many-to-One            |
+| Product_Inventory           | Production_Location         | LocationID               | Many-to-One            |
+| Dim_Date                    | Production_WorkOrder        | Start Date → Date        | One-to-Many            |
 
 
 ## 3️⃣ Design Thinking Framework  
@@ -188,12 +199,11 @@ Conducted through cross-departmental discussions
 
 
 ### Page 2: Inventory Dashboard  
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%202.png?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%202%20new.png?raw=true)
 
 #### Key Takeaways:  
 - **Inventory Overview**: Monitor **total stock**, number of **overstock cases**, number of **stockouts**, and products that need **reorder**.
 - **Location Analysis**: Inventory distributed across different **production sites/warehouses**, highlighting **disparities between locations**.
-- **Category Analysis**: Total stock divided by **product categories** (components, bikes, accessories, clothing), with the ability to drill down into **subcategories** and **product names**, helping identify which category or product **holds the most inventory**.
 - **Product-Level Tracking**: List of **products** with **stock quantity, storage location, safety stock level**, and **status** (e.g., needs reorder, low stock, normal), along with **PriceLevel** (Low, Normal, High).
 - **Proactive Alerts**: Identify **products requiring reorder** to avoid **production disruption** or **shortages**.
 - **Detailed Filters**: Filter by **year, Work Order ID, product, location, or reason** to analyze inventory conditions in more detail.

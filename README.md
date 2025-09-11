@@ -157,7 +157,9 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 | PriceLevel            | TEXT             | Custom field for price level/category (not standard in AdventureWorks)      |
 
 - **Data Relationship**  
-  
+
+![image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Data%20Model.png?raw=true)
+
 | **From Table**              | **To Table**                | **Join Key**             | **Relationship Type** |
 |-----------------------------|-----------------------------|--------------------------|------------------------|
 | Production_WorkOrder        | Product_Product             | ProductID                | Many-to-One            |

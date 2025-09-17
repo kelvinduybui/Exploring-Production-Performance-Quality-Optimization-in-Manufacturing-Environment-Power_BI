@@ -186,14 +186,14 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 ## 3️⃣ Design Thinking Framework  
 
 ### 🤝 Empathize  
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Empathy%201_Manu.jpg?raw=true)
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Empathy%202_Manu.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%201%20p1.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%201%20p2.jpg?raw=true)
 
 ### 🎯 Define Northstar Metric & Point of View  
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/POV_manu.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%202.jpg?raw=true)
 
 ### 💡 Ideate  
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Ideate_manu.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%203.jpg?raw=true)
 
 ### 🛠️ Prototype & Review  
 Conducted through cross-departmental discussions  

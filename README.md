@@ -44,7 +44,7 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 #### Table Used:  
 
 <details>
-<summary><b>Dim_date</b></summary>
+<summary><b> - Dim_date</b></summary>
 
 | Column Name | Data Type | Description         |
 |-------------|-----------|---------------------|

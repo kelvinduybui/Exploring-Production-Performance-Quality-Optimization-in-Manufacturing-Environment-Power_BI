@@ -43,132 +43,144 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 ### 🏷️ **Data Structure**  
 #### Table Used:  
 
-- **Dim_date**  
+<details>
+<summary><b>Dim_date</b></summary>
 
-| Column Name | Data Type | Description            |
-|-------------|-----------|------------------------|
-| Date        | DATETIME  | Full date value        |
-| Year        | INT       | Year number            |
-| Month       | TEXT      | Month with year        |
-| Quarter     | TEXT      | Quarter with year      |
-| Week        | INT       | Week number of year    |
-| Day         | INT       | Day number of month    |
+| Column Name | Data Type | Description         |
+|-------------|-----------|---------------------|
+| Date        | DATETIME  | Full date value     |
+| Year        | INT       | Year number         |
+| Month       | TEXT      | Month with year     |
+| Quarter     | TEXT      | Quarter with year   |
+| Week        | INT       | Week number of year |
+| Day         | INT       | Day number of month |
 
-- **Product_Inventory**
+</details>
 
-| Column Name  | Data Type        | Description                  |
-|--------------|------------------|------------------------------|
-| ProductID    | INT              | Product identifier           |
-| LocationID   | INT              | Location identifier          |
-| Shelf        | INT              | Storage shelf                |
-| Bin          | INT              | Storage bin                  |
-| Quantity     | INT              | Inventory quantity           |
-| rowguid      | UNIQUEIDENTIFIER | Unique identifier (GUID)     |
-| ModifiedDate | DATETIME         | Lastest modified date        |
-| SafetyStock  | INT              | Safety stock level           |
-| Status       | TEXT             | Quantity Status              |
-| ReorderPoint | INT              | Reorder Point                |
+<details>
+<summary><b>Product_Inventory</b></summary>
 
-- **Production_ScrapReason**
+| Column Name  | Data Type        | Description              |
+|--------------|------------------|--------------------------|
+| ProductID    | INT              | Product identifier       |
+| LocationID   | INT              | Location identifier      |
+| Shelf        | INT              | Storage shelf            |
+| Bin          | INT              | Storage bin              |
+| Quantity     | INT              | Inventory quantity       |
+| rowguid      | UNIQUEIDENTIFIER | Unique identifier (GUID) |
+| ModifiedDate | DATETIME         | Lastest modified date    |
+| SafetyStock  | INT              | Safety stock level       |
+| Status       | TEXT             | Quantity Status          |
+| ReorderPoint | INT              | Reorder Point            |
 
-| Column Name    | Data Type    | Description               |
-|----------------|--------------|---------------------------|
-| ScrapReasonID  | INT          | Scrap reason identifier   |
-| Name           | TEXT         | Scrap reason description  |
-| ModifiedDate   | DATETIME     | Lastest update date       |
+</details>
 
-- **Production_Location**
+<details>
+<summary><b>Production_ScrapReason</b></summary>
 
-| Column Name   | Data Type | Description                    |
-|---------------|-----------|--------------------------------|
-| LocationID    | INT       | Unique location identifier     |
-| Name          | TEXT      | Location name                  |
-| CostRate      | DECIMAL   | Cost rate per unit resource    |
-| Availability  | INT       | Location availability capacity |
-| ModifiedDate  | DATETIME  | Lastest update date            |
+| Column Name   | Data Type | Description              |
+|---------------|-----------|--------------------------|
+| ScrapReasonID | INT       | Scrap reason identifier  |
+| Name          | TEXT      | Scrap reason description |
+| ModifiedDate  | DATETIME  | Lastest update date      |
 
-- **Production_WorkOrder**
+</details>
 
-| Column Name     | Data Type | Description                                               |
-|-----------------|-----------|-----------------------------------------------------------|
-| WorkOrderID     | INT       | Work order identifier                                     |
-| ProductID       | INT       | Product identifier                                        |
-| OrderQty        | INT       | Ordered quantity                                          |
-| StockedQty      | INT       | Quantity stocked after production                         |
-| ScrappedQty     | INT       | Scrapped quantity                                         |
-| StartDate       | DATETIME  | Planned start date                                        |
-| EndDate         | DATETIME  | Planned end date                                          |
-| DueDate         | DATETIME  | Required completion date                                  |
-| ScrapReasonID   | INT       | Scrap reason identifier                                   |
-| ModifiedDate    | DATETIME  | Latest update date                                        |
-| Status          | TEXT      | Work order status (e.g., completed on time/late/in progress/open) |
-| IsDelayed       | BIN       | 1 if delayed, else 0                                      |
-| ScrapReason     | TEXT      | Scrap reason                                              |
+<details>
+<summary><b>Production_Location</b></summary>
 
-- **Production_WorkOrderRouting**
+| Column Name  | Data Type | Description                    |
+|--------------|-----------|--------------------------------|
+| LocationID   | INT       | Unique location identifier     |
+| Name         | TEXT      | Location name                  |
+| CostRate     | DECIMAL   | Cost rate per unit resource    |
+| Availability | INT       | Location availability capacity |
+| ModifiedDate | DATETIME  | Lastest update date            |
 
-| Column Name          | Data Type | Description                          |
-|----------------------|-----------|--------------------------------------|
-| WorkOrderID          | INT       | Work order identifier                |
-| ProductID            | INT       | Product identifier                   |
-| OperationSequence    | INT       | Operation order                      |
-| LocationID           | INT       | Production location identifier       |
-| ScheduledStartDate   | DATETIME  | Planned start time                   |
-| ScheduledEndDate     | DATETIME  | Planned end time                     |
-| ActualStartDate      | DATETIME  | Actual start time                    |
-| ActualEndDate        | DATETIME  | Actual end time                      |
-| ActualResourceHrs    | DECIMAL   | Actual resource hours consumed       |
-| PlannedCost          | DECIMAL   | Planned production cost              |
-| ActualCost           | DECIMAL   | Actual production cost               |
-| ModifiedDate         | DATETIME  | Latest update date                   |
-| LocationName         | TEXT      | Location name                        |
-| ScheduledProducingDays | INT     | Planned production days              |
-| ActualProducingDays  | INT       | Actual production days               |
+</details>
 
-- **Product_Product**
+<details>
+<summary><b>Production_WorkOrder</b></summary>
 
-| Column Name           | Data Type        | Description                                                                 |
-|-----------------------|------------------|-----------------------------------------------------------------------------|
-| ProductID             | INT              | Product identifier (primary key)                                            |
-| Name                  | TEXT             | Product name                                                                |
-| ProductNumber         | TEXT             | Unique product number/code                                                  |
-| MakeFlag              | BIT              | 1 = manufactured in-house, 0 = purchased externally                         |
-| FinishedGoodsFlag     | BIT              | 1 = sold as finished product, 0 = component only                            |
-| Color                 | TEXT             | Product color                                                               |
-| SafetyStockLevel      | INT              | Minimum inventory to maintain                                               |
-| ReorderPoint          | INT              | Inventory level that triggers reordering                                    |
-| StandardCost          | DECIMAL          | Standard manufacturing cost                                                 |
-| ListPrice             | DECIMAL          | Selling price                                                               |
-| Size                  | TEXT             | Product size (e.g., S, M, L, XL)                                            |
-| SizeUnitMeasureCode   | TEXT             | Unit of measure for size (e.g., CM, IN)                                     |
-| WeightUnitMeasureCode | TEXT             | Unit of measure for weight (e.g., LB, KG)                                   |
-| Weight                | DECIMAL          | Product weight                                                              |
-| DaysToManufacture     | INT              | Estimated days required to manufacture                                      |
-| ProductLine           | TEXT             | Product line code (R = Road, M = Mountain, T = Touring, S = Standard)       |
-| Class                 | TEXT             | Product class (H = High, M = Medium, L = Low)                               |
-| Style                 | TEXT             | Product style (W = Women’s, M = Men’s, U = Universal)                       |
-| ProductSubcategoryID  | INT              | Linked product subcategory identifier (foreign key)                         |
-| ProductModelID        | INT              | Linked product model identifier (foreign key)                               |
-| SellStartDate         | DATETIME         | Date when product was first available for sale                              |
-| SellEndDate           | DATETIME         | Date when product was no longer available for sale                          |
-| DiscontinuedDate      | DATETIME         | Date product was officially discontinued                                    |
-| rowguid               | UNIQUEIDENTIFIER | Globally unique identifier for replication/support                          |
-| ModifiedDate          | DATETIME         | Last modification date                                                      |
-| PriceLevel            | TEXT             | Custom field for price level/category (not standard in AdventureWorks)      |
+| Column Name   | Data Type | Description                                               |
+|---------------|-----------|-----------------------------------------------------------|
+| WorkOrderID   | INT       | Work order identifier                                     |
+| ProductID     | INT       | Product identifier                                        |
+| OrderQty      | INT       | Ordered quantity                                          |
+| StockedQty    | INT       | Quantity stocked after production                         |
+| ScrappedQty   | INT       | Scrapped quantity                                         |
+| StartDate     | DATETIME  | Planned start date                                        |
+| EndDate       | DATETIME  | Planned end date                                          |
+| DueDate       | DATETIME  | Required completion date                                  |
+| ScrapReasonID | INT       | Scrap reason identifier                                   |
+| ModifiedDate  | DATETIME  | Latest update date                                        |
+| Status        | TEXT      | Work order status (e.g., completed on time/late/in progress/open) |
+| IsDelayed     | BIN       | 1 if delayed, else 0                                      |
+| ScrapReason   | TEXT      | Scrap reason                                              |
+
+</details>
+
+<details>
+<summary><b>Production_WorkOrderRouting</b></summary>
+
+| Column Name           | Data Type | Description                    |
+|-----------------------|-----------|--------------------------------|
+| WorkOrderID           | INT       | Work order identifier          |
+| ProductID             | INT       | Product identifier             |
+| OperationSequence     | INT       | Operation order                |
+| LocationID            | INT       | Production location identifier |
+| ScheduledStartDate    | DATETIME  | Planned start time             |
+| ScheduledEndDate      | DATETIME  | Planned end time               |
+| ActualStartDate       | DATETIME  | Actual start time              |
+| ActualEndDate         | DATETIME  | Actual end time                |
+| ActualResourceHrs     | DECIMAL   | Actual resource hours consumed |
+| PlannedCost           | DECIMAL   | Planned production cost        |
+| ActualCost            | DECIMAL   | Actual production cost         |
+| ModifiedDate          | DATETIME  | Latest update date             |
+| LocationName          | TEXT      | Location name                  |
+| ScheduledProducingDays| INT       | Planned production days        |
+| ActualProducingDays   | INT       | Actual production days         |
+
+</details>
+
+<details>
+<summary><b>Product_Product</b></summary>
+
+| Column Name           | Data Type        | Description                              |
+|-----------------------|------------------|------------------------------------------|
+| ProductID             | INT              | Product identifier (primary key)         |
+| Name                  | TEXT             | Product name                             |
+| ProductNumber         | TEXT             | Unique product number/code               |
+| MakeFlag              | BIT              | 1 = manufactured in-house, 0 = purchased externally |
+| FinishedGoodsFlag     | BIT              | 1 = sold as finished product, 0 = component only |
+| Color                 | TEXT             | Product color                            |
+| SafetyStockLevel      | INT              | Minimum inventory to maintain            |
+| ReorderPoint          | INT              | Inventory level that triggers reordering |
+| StandardCost          | DECIMAL          | Standard manufacturing cost              |
+| ListPrice             | DECIMAL          | Selling price                            |
+| Size                  | TEXT             | Product size (e.g., S, M, L, XL)         |
+| SizeUnitMeasureCode   | TEXT             | Unit of measure for size                 |
+| WeightUnitMeasureCode | TEXT             | Unit of measure for weight               |
+| Weight                | DECIMAL          | Product weight                           |
+| DaysToManufacture     | INT              | Estimated days required to manufacture   |
+| ProductLine           | TEXT             | Product line code                        |
+| Class                 | TEXT             | Product class                            |
+| Style                 | TEXT             | Product style                            |
+| ProductSubcategoryID  | INT              | Linked product subcategory identifier    |
+| ProductModelID        | INT              | Linked product model identifier          |
+| SellStartDate         | DATETIME         | Date when product was first available    |
+| SellEndDate           | DATETIME         | Date when product was no longer available|
+| DiscontinuedDate      | DATETIME         | Date product was officially discontinued |
+| rowguid               | UNIQUEIDENTIFIER | Globally unique identifier               |
+| ModifiedDate          | DATETIME         | Last modification date                   |
+| PriceLevel            | TEXT             | Custom field for price level/category    |
+
+</details>
+
 
 - **Data Relationship**  
 
 ![image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Data%20Model.png?raw=true)
-
-| **From Table**              | **To Table**                | **Join Key**             | **Relationship Type** |
-|-----------------------------|-----------------------------|--------------------------|------------------------|
-| Production_WorkOrder        | Product_Product             | ProductID                | Many-to-One            |
-| Production_WorkOrder        | Production_ScrapReason      | ScrapReasonID            | Many-to-One            |
-| Production_WorkOrder        | Production_WorkOrderRouting | WorkOrderID              | One-to-Many            |
-| Production_WorkOrderRouting | Production_Location         | LocationID               | Many-to-One            |
-| Product_Inventory           | Product_Product             | ProductID                | Many-to-One            |
-| Product_Inventory           | Production_Location         | LocationID               | Many-to-One            |
-| Dim_Date                    | Production_WorkOrder        | Start Date → Date        | One-to-Many            |
 
 
 ## 3️⃣ Design Thinking Framework  

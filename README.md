@@ -190,160 +190,156 @@ Provide the stakeholders with a clear and interactive dashboard to monitor manuf
 ![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%201%20p2.jpg?raw=true)
 
 ### 🎯 Define Northstar Metric & Point of View  
-![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%202.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%202%20-%20POV.jpg?raw=true)
 
 ### 💡 Ideate  
-![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%203.jpg?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Stage%203%20-%20Ideate.jpg?raw=true)
 
 ### 🛠️ Prototype & Review  
 Conducted through cross-departmental discussions  
 
 ## 4️⃣ Visualization  
-### Page 1: Production Dashboard  
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%201.png?raw=true)  
+### Page 1: Overview Dashboard  
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%201%20-%20Overview.png?raw=true)  
 
 #### Key Takeaways:  
-- **Production Overview**: Number of **Work Orders**, number of **products**, and **Work Order status** (completed on time, completed late).
-- **Progress and Time**: **Average manufacturing time**, **average delay time**, and **actual production days** compared to scheduled days by year.
-- **Quality and Efficiency**: **Actual cost** and **actual hours** at each production stage/location.
-- **Product Analysis**: **Production volume by product type**, helping identify which products are produced the most.
-- **Delay Monitoring & Alerts**: Track **delay rates** and **alert flags** across different time levels (year, quarter, month, week, day), providing insights into **delivery trends** and fluctuations.
-- **Detail information** Ability to view detailed **status of each Work Order ID** and **Product ID**.
-- **Detailed Filters**: Ability to filter by **year, Work Order ID, product, location, and reason** to drill down into specific aspects.
+From this dashboard, the following key aspects can be **viewed** and **monitored** :
 
+- **Production Volume**: Track **total work orders** and **total products** to understand overall **production scale**.  
+- **Inventory Status**: Monitor **stockouts**, **overstock**, and **reorder needs**.  
+- **Product Quality & Issues**: See **product status** (*normal vs. issue*) and track **scrap rates**.  
+- **Operational Efficiency by Process**: Follow **average actual cost** and **hours** by **production stage**.  
+- **Trends & Alerts**: Observe **delay trends** and flag **alerts** over time.  
+- **Key Products**: Identify **top produced products** and their **scrap rates**.  
 
-### Page 2: Inventory Dashboard  
-![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%202%20new.png?raw=true)
+### Page 2: Production Dashboard  
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%202%20-%20Production.png?raw=true)
 
 #### Key Takeaways:  
-- **Inventory Overview**: Monitor **total stock**, number of **overstock cases**, number of **stockouts**, and products that need **reorder**.
-- **Location Analysis**: Inventory distributed across different **production sites/warehouses**, highlighting **disparities between locations**.
-- **Product-Level Tracking**: List of **products** with **stock quantity, storage location, safety stock level**, and **status** (e.g., needs reorder, low stock, normal), along with **PriceLevel** (Low, Normal, High).
-- **Proactive Alerts**: Identify **products requiring reorder** to avoid **production disruption** or **shortages**.
-- **Detailed Filters**: Filter by **year, Work Order ID, product, location, or reason** to analyze inventory conditions in more detail.
+From this production dashboard, the following aspects can be **viewed** and **monitored**:
 
+- **Production Efficiency**: **Average manufacturing time**, **delay time**, and **on-time performance** for both **quantity** and **work orders**.  
+- **Work Order Status**: Breakdown of **completed orders** (*on time vs. late*).  
+- **Planned vs. Actual Performance**: Comparison of **scheduled producing days** vs. **actual producing days** over time.  
+- **Operational Insights**: Trends in **lead time**, **delays**, and **completion performance**.  
 
 ### Page 3: Quality Control Dashboard  
-![Image](https://github.com/kelvinduybui/Manufacturing-Performance-Operational-Optimization-at-AdventureWorks-Power-BI/blob/main/Pictures/Page%203.png?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%203%20-%20QC.png?raw=true)
 
 #### Key Takeaways:  
-- **Scrap Overview**: Track the number of **Work Orders with scrap**, **total scrapped products**, **scrap rate (%)**, and **total scrap cost**.
-- **Location Analysis**: Scrap rate by **production stage/location**, helping identify areas with **higher defect rates**.
-- **Time Analysis**: Scrap rate (%) by **year**, allowing observation of **trends and fluctuations** over different periods.
-- **Root Cause Analysis**: Scrap rate by **reason** (e.g., drill size too large, paint process failed, assembly errors), supporting the identification of **root causes**.
-- **Product Analysis**: Scrap rate by **product type**, highlighting which products are **more prone to defects**.
-- **Detailed Scrap Records**: A detailed list of **scrap cases** with **reasons and quantities**, enabling easier **tracking and control** of specific issues.
-- **Detailed Filters**: Filter by **year, Work Order ID, product, location, or reason** for deeper analysis.
+From this quality control dashboard, the following aspects can be **viewed** and **monitored**:
+
+- **Scrap Performance**: **Total scrap orders**, **scrap quantity**, **scrap rate**, and **scrap cost**.  
+- **Scrap by Location**: Distribution of **scrap** across different **production stages**.  
+- **Scrap Trends**: **Scrap rate** and **cost changes** over time.  
+- **Root Causes**: **Scrap reasons** and their corresponding **rates** and **costs**.  
+- **Product Impact**: **Scrap rate** and **cost** linked to specific **products**.  
+
 
 ## 5️⃣ Insights & Recommendations
-### Production insights  
-- **Work Orders & Status**:  
-  - A total of **72.59K Work Orders** were recorded.  
-  - **31.4% (22.79K)** were delayed → a relatively high percentage, significantly impacting **production efficiency**.  
+### 🔎 Overview Insights  
 
-- **Production & Delay Time**:  
-  - **Average manufacturing time**: 13.24 days.  
-  - **Average delay time**: 8.44 days (≈ 64% of total production time) → delays are **severe**.  
+- **Production Volume**: A total of **72.59K work orders** were processed, covering **295 products** — reflecting a **broad production portfolio**.  
+- **Inventory Health**: There are **4 stockouts** (*low but critical*), **50 overstock cases**, and **848 items needing reorder** — indicating **imbalance in stock management**.  
+- **Product Status**: The majority of products (**95.23%**) fall under **reorder needed**, **overstock**, or **stockout** status, while only a small portion is **normal** — showing **serious inventory flow imbalance** rather than **quality issues**.  
+- **Cost & Time by Location**:  
+  - **Frame Welding** → **Low actual hours (3.5)** but **very high cost (88)** → **cost inefficiency**.  
+  - **Final Assembly** → **High actual hours (7.8)** but **relatively low cost (35)** → **time inefficiency**.  
+- **Top Products**:  
+  - **BB Ball Bearing** → **Largest production volume (0.91M units)** with a **very low scrap rate (0.11%)** → **efficient and reliable**.  
+  - **Fork End** → **Smaller output (0.23M units)** but a **much higher scrap rate (0.58%)** → **quality concern** despite lower scale.  
+- **Delays**: The **percent delayed** has been **rising steadily** from ~**28% (2011)** to nearly **33% (2014)** → showing a **growing risk in delivery reliability**.
 
-- **Products**:  
-  - **BB Ball Bearing** is the leading product with **0.91M units**, nearly double the second-highest (**Seat Stays**).  
-  - Other key products include **Seat Stays, Blade, Fork End, and Chain Stays**.  
+### 💡 Overview Recommendations  
 
-- **Cost & Labor Hours by Location**:  
-  - **Frame** and **Final Assembly** incur the **highest costs and labor hours**.  
-  - **Paint** and **Deburr** require the least.  
-  - Bottlenecks are concentrated in **Frame** and **Final Assembly** stages.  
+- **Inventory Management**:  
+  - Use **demand forecasting** and **buffer stock rules** to reduce both **reorder needs (848)** and **overstock (50)**.  
+  - Apply **ABC/XYZ analysis** to better align stock with **demand variability**.
 
-- **Delay Trend by Year**:  
-  - Delay rates increased from **~28% in 2011** to **~34% in 2014**.  
-  - Late deliveries are **worsening over time** and not yet effectively resolved.  
+- **Production Efficiency**:
+  - **Standardize best practices** across locations to **minimize variation** in costs and hours.
+  - **Investigate** high-cost or time-consuming processes for **automation** or **process improvement**.
 
-- **Scheduled vs Actual Producing Days**:  
-  - **Actual production days** consistently exceed **scheduled days**, highlighting **inaccurate planning**.   
+- **Delay Mitigation**:  
+  - Strengthen **production scheduling** and apply **early-warning alerts** for **at-risk orders**.  
+  - Explore **load balancing** across locations to relieve **bottlenecks**.  
 
-### Production recommendation  
-- **Improve Planning & Scheduling**  
-  - Enhance **forecasting accuracy** for production time, especially in **Frame** and **Final Assembly**.  
-  - Consider applying **Production Scheduling Optimization** or **Simulation models** to minimize planning gaps.  
+- **Product Focus**:  
+  - Maintain **high standards** for **volume leaders** like **BB Ball Bearing**.  
+  - Improve **quality control** on **Fork End** and other products with **disproportionately high scrap rates**.  
 
-- **Reduce Delay Rate**  
-  - Investigate root causes of delays (e.g., **material shortages, machine downtime, labor shortages**).  
-  - Prioritize **process improvements** for high-volume products such as **BB Ball Bearing**.  
+### 🔎 Production Insights  
+- **Manufacturing & Delay Times**:  
+  - **Average manufacturing time**: **13.24 days**.  
+  - **Average delay time**: **8.44 days**.  
+  - → **Production cycles** are **relatively long** with **notable delays**.  
 
-- **Optimize Costs by Location**  
-  - Since **Frame** and **Final Assembly** are cost/time-intensive, evaluate **automation** or **line balancing** to reduce bottlenecks.  
+- **On-Time Performance**:  
+  - **Qty On Time %**: **78.56%**.  
+  - **WO On Time %**: **68.60%**.  
+  - → While most **quantities** are delivered on time, the percentage of **work orders** completed on time is **relatively low**.  
 
-- **Develop Long-term KPIs**  
-  - Target reducing the **delay rate** from **31.4% → below 20%** within 1–2 years.  
-  - Target reducing the **gap between Scheduled vs Actual Days** to **<10%**.
+- **Work Order Status**:  
+  - **68.6% completed on time**, **31.4% late** (≈**22.8K late work orders**).  
 
-### Inventory insights  
-- **Overall Inventory**:  
-  - **Total Inventory**: 335.97K units.  
-  - **50 Overstock cases** and **4 Stockouts**, with **848 Reorders** needed.  
+- **Scheduled vs. Actual Producing Days**:  
+  - **Actual producing days** consistently **exceed scheduled days** → frequent **overruns**.  
 
-- **Inventory by Location**:  
-  - Inventory is heavily concentrated in **Subassembly** and **Miscellaneous Storage**, holding the **highest stock levels**.  
-  - Downstream locations like **Paint Shop & Storage** hold significantly less inventory → **imbalance across the production chain**.  
+- **By Location**:  
+  - **Scheduled average**: ~**11 days**.  
+  - **Actual average**: **12–12.7 days**.  
+  - **Debur and Polish (12.70)** and **Specialized Paint (12.76)** show the **largest overruns** → main **bottlenecks** are in **assembly stages**.  
 
-- **Inventory by Category**:  
-  - **Components** dominate inventory with **40K+ units**, much higher than other categories.  
-  - **Bikes** and **Accessories** follow, while **Clothing** contributes the least.  
+### 💡 Production Recommendations  
 
-- **Stockout vs. Overstock**:  
-  - Both **Stockouts (4)** and **Overstock (50)** cases fall under **PriceLevel = Normal**.  
-  - Pricing is not the main driver → issues stem from **planning, forecasting, and supply chain execution gaps**.
-    
-### Inventory recommendations  
-- **Balance Inventory Across Locations**  
-  - Reduce excessive stock at **Subassembly/Miscellaneous Storage** and redistribute to **downstream stages**.  
-  - Apply **line balancing** or **Kanban systems** for smoother inventory flow.  
+- **Efficiency Improvement**:  
+  - Focus on improving **Debur and Polish** & **Specialized Paint** through **automation**, **better resource allocation**, and **workforce training**.  
+  - Adjust **time standards** or add **buffer capacity** to reduce **gaps** between **scheduled** and **actual**.  
 
-- **Reduce Overstock**  
-  - Analyze the **50 Overstock cases** (e.g., forecasting errors, overproduction, low sales).  
-  - Apply **ABC/XYZ analysis** to better align stock with **demand variability**.  
+- **On-Time Delivery**:  
+  - Implement **detailed milestone tracking** for each **work order**.  
+  - Set up **early-warning alerts** for **at-risk orders**.  
 
-- **Set KPI Targets**  
-  - **Reduce Stockouts**: from **4 cases → 0** (short-term).  
-  - **Cut Overstock**: by **30–40% within 1 year**.  
-  - **Improve Reordering**: keep **“Reorder Needed” < 5% of total SKUs** through better **forecasting** and **supplier lead time control**.
-  
-### Quality Control insights  
+- **Scheduling Optimization**:  
+  - Align **production schedules** closer to the **actual average (~12.3 days instead of 11)** to make **planning** more **realistic** and reduce **lateness**.  
+
+### 🔎 Quality Control Insights  
+
 - **Overall Scrap Performance**:  
-  - **Scrap rate**: 24% → relatively high.  
-  - **Total scrap cost**: ~$359.95K.  
+  - **Scrap rate**: **24%** → **relatively high**.  
+  - **Total scrap cost**: ~**$359.95K**.  
   - **729 Work Orders** affected, generating **11K+ scrap products**.  
 
 - **By Year**:  
-  - Scrap rate rose from **~12% in 2011 → ~29% in 2013**, then dropped to **~20% in 2014**.  
-  - Indicates **improvement after 2013**, but performance remains **unstable**.  
+  - **Scrap rate** rose from ~**12% (2011)** → ~**29% (2013)**, then dropped to ~**20% (2014)**.  
+  - **Scrap cost** followed the same trend → **peaked in 2013**, then **declined in 2014**.  
+  - → Indicates **improvement after 2013**, but **performance remains unstable**.  
 
 - **By Location**:  
-  - Highest scrap in **Subassembly (21%)**, followed by **Frame Welding (18%)** and **Frame Forming (18%)**.  
-  - Most scrap originates from **early-stage production processes**.  
+  - **Highest scrap** in **Subassembly (21%)**, followed by **Frame Welding (18%)** and **Frame Forming (18%)**.  
+  - Most **scrap originates** from **early-stage production processes** → driving both **quantity** and **cost**.  
 
 - **By Scrap Reason**:  
-  - Top reasons: **Seat assembly not as ordered (3.1%)**, **Drill size too large (2.9%)**, **Paint process failed (2.9%)**, **Trim length too long (2.9%)**.  
-  - Issues mainly tied to **machine setup** and **quality inspection processes**.  
+  - **Top reasons**: **Seat assembly not as ordered (3.1%)**, **Drill size too large (2.9%)**, **Paint process failed (2.9%)**, **Trim length too long (2.9%)**.  
+  - **Costs don’t fully align with rates**: e.g., **Trim length too long** → **high scrap rate** but **cost only ~$18K** → tied to **lower-value parts**.  
+  - → Issues linked to **machine setup** and **quality inspection processes**.  
 
 - **By Product**:  
-  - Scrap rates across products are **relatively high**, often **>50%**.  
-  - Critical cases: **ML Road Frame – Red (75%)** and **Mountain-100 Black (63%)**.  
-  - Suggests quality issues are **widespread across multiple SKUs**.  
+  - **Scrap rates** across products are **relatively high**, often **>50%**.  
+  - **Critical cases**: **ML Road Frame – Red (75%)**, **Mountain-100 Black (63%)**.  
+  - **Scrap cost varies**: **expensive frames** drive **high cost**, while **high-rate low-value items** generate **less cost**.  
+  - → Suggests **quality issues are widespread**, but **financial impact** is concentrated in **high-value SKUs**.  
 
-### Quality Control recommendations  
-- **Target High-Scrap Products**  
-  - Prioritize process review for **top 3 products** with highest scrap rates.  
-  - Apply **root cause analysis** (Fishbone, 5 Whys) to identify design, material, or process issues.  
+### 💡 Quality Control Recommendations  
 
-- **Improve Subassembly & Welding**  
-  - Enhance **machine calibration** and **operator training** in high-scrap stages.  
-  - Implement **early-stage quality checkpoints** to prevent downstream defects.  
+- **Target High-Scrap Products**:  
+  - Prioritize **process review** for **top 3 products** with the **highest scrap rates** and **costs**.  
+  - Apply **root cause analysis** (*Fishbone, 5 Whys*) to identify **design**, **material**, or **process issues**.  
 
-- **Cost Reduction Strategy**  
-  - A **10% scrap reduction** could save **~$36K**.  
+- **Improve Subassembly & Welding**:  
+  - Enhance **machine calibration** and **operator training** in **high-scrap stages**.  
+  - Implement **early-stage quality checkpoints** to prevent **downstream defects** and **extra cost**.  
+
+- **Cost-Focused Monitoring**:  
+  - Track both **scrap rate** and **scrap cost** in **KPIs**.  
   - Focus on processes with **high cost + high scrap rate**.  
-
-- **Sustain Quality Improvement**  
-  - Develop a **Scrap KPI dashboard** with **weekly/monthly tracking**.  
-  - Adopt **Kaizen / Lean Six Sigma** to maintain scrap levels **<15%**.  

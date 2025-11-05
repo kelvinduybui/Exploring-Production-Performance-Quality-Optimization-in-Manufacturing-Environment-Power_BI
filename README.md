@@ -200,7 +200,7 @@ Conducted through cross-departmental discussions
 
 ## 4️⃣ Visualization  
 ### Page 1: Overview Dashboard  
-![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%201%20-%20Overview.png?raw=true)  
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/overview.png?raw=true)  
 
 #### Key Takeaways:  
 From this dashboard, the following key aspects can be **viewed** and **monitored** :
@@ -213,7 +213,7 @@ From this dashboard, the following key aspects can be **viewed** and **monitored
 - **Key Products**: Identify **top produced products** and their **scrap rates**.  
 
 ### Page 2: Production Dashboard  
-![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%202%20-%20Production.png?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/production.png?raw=true)
 
 #### Key Takeaways:  
 From this production dashboard, the following aspects can be **viewed** and **monitored**:
@@ -224,7 +224,7 @@ From this production dashboard, the following aspects can be **viewed** and **mo
 - **Operational Insights**: Trends in **lead time**, **delays**, and **completion performance**.  
 
 ### Page 3: Quality Control Dashboard  
-![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/Page%203%20-%20QC.png?raw=true)
+![Image](https://github.com/kelvinduybui/Exploring-Production-Performance-Quality-Optimization-in-Manufacturing-Environment-Power_BI/blob/main/Pictures/qc.png?raw=true)
 
 #### Key Takeaways:  
 From this quality control dashboard, the following aspects can be **viewed** and **monitored**:
